@@ -10,7 +10,7 @@ typedef struct {
 } SeqList;
 
 Status InitList(SeqList &L); // 初始化表，构造一个空的线性表L
-int Length(SeqList &L);  // 获取线性表L的长度
+int Length(SeqList L);  // 获取线性表L的长度
 int LocateElem(SeqList L, ElemType e);  // 按值查找，返回e在线性表L第一次出现的位置
 Status GetElem(SeqList L, int i, ElemType &e);  // 按位查找，返回线性表L中第i个元素
 Status ListInsert(SeqList &L, int i, ElemType e);  // 插入操作，在线性表第i个位置插入e
@@ -28,7 +28,7 @@ Status InitList(SeqList &L) {  // 分配内存和指定表长，两项工作
   return OK;
 }
 
-int Length(SeqList &L) {  // 老实说这个函数应该用不到
+int Length(SeqList L) {  // 老实说这个函数应该用不到
   return L.length;
 }
 

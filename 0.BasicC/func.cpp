@@ -20,3 +20,13 @@ ElemType *RandomArray(int min, int max, int len) {
   }
   return a;
 }
+
+// 设置当前时间种子
+void setSeed() {
+  srand(time(NULL));
+}
+
+// 生成随机一个数
+ElemType Random(int min, int max) {
+  return rand() % max + min;
+}
